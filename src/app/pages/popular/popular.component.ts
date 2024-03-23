@@ -21,11 +21,11 @@ export class PopularComponent {
             // this.spaceBetween = 50
         }
         else if(this.screenWidth >= 480 && this.screenWidth <= 992){
-            this.slidesPerView = 1
+            this.slidesPerView = 2
             // this.spaceBetween = 70
         }
         else if(this.screenWidth >= 992 && this.screenWidth <= 1200){
-            this.slidesPerView = 1
+            this.slidesPerView = 3
             // this.spaceBetween = 100
         }
     }
