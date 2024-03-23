@@ -1,0 +1,45 @@
+<div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-2">
+        <div class="container flex w-full flex-col">
+            <div class="flex items-center justify-between pb-[30px]">
+                <h4 class="text-[32px] font-semibold text-white">Popular Creator</h4>
+                <a href="#" class="text-center text-[20px] text-sm font-semibold leading-6 text-white">
+                    See More <span aria-hidden="true">&rarr;</span>
+                </a>
+            </div>
+            <hr class="pb-5 opacity-50" />
+            <div class="p-5">
+                <div class="container">
+                    <swiper-container
+                        class="mySwiper"
+                        pagination="true"
+                        pagination-clickable="true"
+                        [slidesPerView]="slidesPerView"
+                        space-between="100"
+                        autoplay-delay="2500"
+                        free-mode="true"
+                        autoplay-disable-on-interaction="true">
+                        <swiper-slide *ngFor="let info of infos">
+                            <div class="flex h-[538px] w-auto flex-col justify-between bg-[#071736]">
+                                <div class="z-10 flex-col">
+                                    <div class="relative m-5 flex h-[336px] w-auto flex-col items-center justify-end bg-gray-500">
+                                        <img src="../../assets/img/nft.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" />
+                                        <div class="left-50 absolute bottom-[-25px] flex h-[50px] w-[50px] overflow-hidden rounded-full p-0">
+                                            <img src="../../../assets/img/man.jpg" class="h-full w-full object-cover" />
+                                        </div>
+                                    </div>
+                                    <h2 class="pt-8 text-center text-[20px] font-semibold text-white">{{ info.name }}</h2>
+                                    <p class="text-center text-[16px] font-normal text-white">{{ info.follower }}</p>
+                                </div>
+                                <div
+                                    class="m-4 flex cursor-pointer items-center justify-center bg-gray-500 p-3 text-white hover:bg-white hover:text-black">
+                                    <span class="text-[16px] font-semibold">Follow Now</span>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                    </swiper-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

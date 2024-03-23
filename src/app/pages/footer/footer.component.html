@@ -1,29 +1,26 @@
-<footer class="flex flex-col justify-center items-center">
-    <div class="max-w-7xl w-full flex items-start justify-between py-10">
-        <div class="w-1/4 flex items-start justify-start   text-[#C4C4C4]">
+<footer class="flex flex-col items-center justify-center">
+    <div class="flex w-full max-w-7xl flex-col items-start justify-between px-8 py-10 text-center sm:text-center md:flex-row md:text-left">
+        <div class="flex w-full items-start justify-start text-[#C4C4C4] md:mr-8 md:w-1/4 md:justify-start">
             <a href="#" class="flex flex-col gap-4">
-                <span class="w-autoe text-2xl font-bold" alt="">RAINFTB</span>
-                <p class="text-[14px] leading-[24px] font-normal">
-                    We’re bringing digital creators, crypto natives, and
-                    collector together to move culture forward
+                <span class="w-auto text-2xl font-bold" alt="">RAINFTB</span>
+                <p class="text-[14px] font-normal leading-[24px]">
+                    We’re bringing digital creators, crypto natives, and collector together to move culture forward
                 </p>
             </a>
         </div>
 
-        <div class="w-2/3 flex flex-row justify-between">
+        <div class="mt-5 flex w-full flex-col justify-between gap-10 md:w-2/3 md:flex-row lg:mt-0 lg:gap-0">
             <ng-container *ngFor="let link of links">
-                <div class="flex flex-col gap-6 items-start text-[#C4C4C4]">
+                <div class="flex flex-col items-center gap-4 text-[#C4C4C4] md:items-start">
                     <h2 class="text-lg font-semibold">{{ link.title }}</h2>
                     <ng-container *ngFor="let section of link.section">
-                        <a class="text-sm cursor-pointer">{{ section.label }}</a>
+                        <a class="cursor-pointer text-sm">{{ section.label }}</a>
                     </ng-container>
                 </div>
             </ng-container>
         </div>
     </div>
-    <div
-        class="max-w-7xl w-full text-sm text-[#FFFFFFB2] text-center py-8 border-t border-[#FFFFFF] border-opacity-20"
-    >
+    <div class="w-full max-w-7xl border-t border-[#FFFFFF] border-opacity-20 px-8 py-8 text-center text-sm text-[#FFFFFFB2]">
         Copyright 2021 RAINFTB All Right Reserved
     </div>
 </footer>

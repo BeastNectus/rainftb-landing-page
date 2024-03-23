@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-trending',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './trending.component.html',
   styleUrl: './trending.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
