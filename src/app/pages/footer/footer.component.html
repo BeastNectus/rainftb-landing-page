@@ -1,12 +1,29 @@
-<footer class="border-t-2">
-    <div class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
-        <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
-                <span class="h-8 w-auto text-white text-[24px] font-bold" alt="">RAINFTB</span>
-                <p class="text-white text-[14px] leading-[24px] font-normal">
-                    We’re bringing digital creators, crypto natives, and collector together to move culture forward
+<footer class="flex flex-col justify-center items-center">
+    <div class="max-w-7xl w-full flex items-start justify-between py-10">
+        <div class="w-1/4 flex items-start justify-start   text-[#C4C4C4]">
+            <a href="#" class="flex flex-col gap-4">
+                <span class="w-autoe text-2xl font-bold" alt="">RAINFTB</span>
+                <p class="text-[14px] leading-[24px] font-normal">
+                    We’re bringing digital creators, crypto natives, and
+                    collector together to move culture forward
                 </p>
             </a>
         </div>
+
+        <div class="w-2/3 flex flex-row justify-between">
+            <ng-container *ngFor="let link of links">
+                <div class="flex flex-col gap-6 items-start text-[#C4C4C4]">
+                    <h2 class="text-lg font-semibold">{{ link.title }}</h2>
+                    <ng-container *ngFor="let section of link.section">
+                        <a class="text-sm cursor-pointer">{{ section.label }}</a>
+                    </ng-container>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <div
+        class="max-w-7xl w-full text-sm text-[#FFFFFFB2] text-center py-8 border-t border-[#FFFFFF] border-opacity-20"
+    >
+        Copyright 2021 RAINFTB All Right Reserved
     </div>
 </footer>
