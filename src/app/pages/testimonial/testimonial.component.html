@@ -15,10 +15,8 @@
                         pagination="true"
                         pagination-clickable="true"
                         [slidesPerView]="slidesPerView"
-                        space-between="10"
-                        autoplay-delay="4500"
-                        free-mode="true"
-                        autoplay-disable-on-interaction="true">
+                        [spaceBetween]="spaceBetween"
+                        free-mode="true">
                         <swiper-slide *ngFor="let info of infos">
                             <div class="flex h-[192px] w-[384px] flex-col justify-between bg-[#071736] p-6">
                                 <div class="flex justify-start gap-[5rem]">
