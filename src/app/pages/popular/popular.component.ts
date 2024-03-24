@@ -33,20 +33,27 @@ export class PopularComponent {
     infos = [
         {
           "name": "Rondo Alexander",
-          "follower": '9.4m followers'
+          "follower": '9.4m followers',
+          "img": "../../../assets/img/nft.jpg",
+          "avatar": "../../../assets/img/man.jpg"
         },
         {
           "name": "Martias Queenbeer",
-          "follower": '10m followers'
-          
+          "follower": '10m followers',
+          "img": "../../../assets/img/bitcoin.jpg",
+          "avatar": "../../../assets/img/man-2.jpg"
         },
         {
           "name": "Tifanny Whites",
-          "follower": '7m followers'
+          "follower": '7m followers',
+          "img": "../../../assets/img/blockchain.jpg",
+          "avatar": "../../../assets/img/lady.jpg"
         },
         {
           "name": "Yu Zhong",
-          "follower": '20m followers'
+          "follower": '20m followers',
+          "img": "../../../assets/img/coin.jpg",
+          "avatar": "../../../assets/img/man.jpg"
         }
       ]
 }

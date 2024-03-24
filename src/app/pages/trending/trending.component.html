@@ -1,14 +1,14 @@
-<div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+<div class="relative isolate h-screen overflow-hidden bg-gray-900 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-2">
         <div class="container flex w-full flex-col">
-            <div class="flex items-center justify-between pb-[30px]">
+            <div class="flex items-center justify-center pb-[30px] md:justify-between lg:justify-between">
                 <h4 class="text-[32px] font-semibold text-white">Trending Auctions</h4>
-                <a href="#" class="text-center text-[20px] text-sm font-semibold leading-6 text-white">
+                <a href="#" class="hidden text-center text-[20px] text-sm font-semibold leading-6 text-white md:inline-block lg:inline-block">
                     See More <span aria-hidden="true">&rarr;</span>
                 </a>
             </div>
             <hr class="pb-5 opacity-50" />
-            <div class="p-5">
+            <div class="mb-4 mt-4 pb-5 pt-5">
                 <div class="container">
                     <swiper-container
                         class="mySwiper"
@@ -17,30 +17,33 @@
                         [slidesPerView]="slidesPerView"
                         space-between="100"
                         free-mode="true"
-                        autoplay-delay="2500"
+                        autoplay-delay="1000"
                         autoplay-disable-on-interaction="true">
-                        <swiper-slide *ngFor="let item of [1, 2, 3, 4, 5]">
+                        <swiper-slide *ngFor="let product of products">
                             <div class="flex h-[538px] w-auto flex-col justify-between bg-[#071736]">
                                 <div class="flex-col">
                                     <div class="relative m-5 flex h-[336px] w-auto flex-col justify-end bg-gray-500">
-                                        <img src="../../assets/img/nft.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" />
+                                        <img src="{{ product.img }}" alt="" class="absolute inset-0 h-full w-full object-cover" />
                                         <div class="z-10 m-4 flex bg-black bg-opacity-50 p-5">
                                             <div class="container flex flex-col">
                                                 <p class="text-[14px] font-normal text-white">Current Bid</p>
-                                                <span class="text-[20px] font-semibold text-white">2.52 ETH</span>
+                                                <span class="text-[20px] font-semibold text-white">{{ product.price }}</span>
                                             </div>
                                             <div class="container flex flex-col justify-center">
-                                                <span class="text-[16px] font-semibold text-white">20 m 20 s left</span>
+                                                <span class="text-[16px] font-semibold text-white">{{ product.time }}</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="container flex justify-around">
                                         <div class="flex gap-4">
-                                            <img src="../../../assets/img/nft.jpg" alt="" class="flex h-[48px] w-[48px] items-center rounded-full" />
+                                            <img
+                                                src="{{ product.avatar }}"
+                                                alt=""
+                                                class="flex h-[48px] w-[48px] items-center rounded-full object-cover" />
                                             <div class="flex flex-col">
-                                                <h3 class="text-[20px] font-semibold text-white">Jeep Auctions</h3>
+                                                <h3 class="text-[20px] font-semibold text-white">{{ product.seller }}</h3>
                                                 <p class="text-[14px] font-normal text-gray-400">
-                                                    {{ '@jeepauctions21' }}
+                                                    {{ product.social }}
                                                 </p>
                                             </div>
                                         </div>
@@ -58,6 +61,11 @@
                     </swiper-container>
                 </div>
             </div>
+            <a
+                href="#"
+                class="flex h-[56px] items-center justify-center border-[1.5px] text-center text-[20px] text-sm font-semibold leading-6 text-white hover:bg-white hover:text-black md:hidden lg:hidden">
+                See More
+            </a>
         </div>
     </div>
 </div>

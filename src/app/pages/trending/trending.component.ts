@@ -30,4 +30,40 @@ export class TrendingComponent {
             // this.spaceBetween = 100
         }
     }
+
+    products = [
+        {
+          "price": '2.75 ETH',
+          "img": "../../../assets/img/nft.jpg",
+          "avatar": "../../../assets/img/man.jpg",
+          "time": "10 m 20 s left",
+          "seller": "Jeep Auctions",
+          "social": "@jeepauctions21"
+        },
+        {
+          "name": "Martias Queenbeer",
+          "price": '3.75 ETH',
+          "img": "../../../assets/img/bitcoin.jpg",
+          "avatar": "../../../assets/img/man-2.jpg",
+          "time": "20 m 30 s left",
+          "seller": "Car Luxy",
+          "social": "@carluxy11"
+        },
+        {
+          "price": '4.75 ETH',
+          "img": "../../../assets/img/blockchain.jpg",
+          "avatar": "../../../assets/img/lady.jpg",
+          "time": "30 m 40 s left",
+          "seller": "Lambo Mind",
+          "social": "@lambomind92"
+        },
+        {
+          "price": '5.75 ETH',
+          "img": "../../../assets/img/coin.jpg",
+          "avatar": "../../../assets/img/man.jpg",
+          "time": "40 m 50 s left",
+          "seller": "Axios Legacy",
+          "social": "@axioslegacy75"
+        }
+      ]
 }
