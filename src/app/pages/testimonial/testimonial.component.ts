@@ -33,24 +33,24 @@ export class TestimonialComponent {
     infos = [
         {
           "name": "Sackie Jones Rio",
-          "role": 'Web Developer at Brizzy',
+          "role": 'Web Developer',
           "rating": "4.5",
           "description": "“Platform NFT Marketplace terbaik yang miliknya pengguna mendapatkan banyak manfaat dan banyak bermunculan seperti pasar sebagus RAINFTB ini.”",
-          "img": "../../../assets/img/man.jpg"
+          "img": "../../../assets/img/Avatar Users2_48.svg"
         },
         {
-          "name": "Jeremy Ray Krondoz",
-          "role": 'Backend Developer at Maxim',
+          "name": "Jeremy Krondoz",
+          "role": 'Backend Developer',
           "rating": "4.6",
           "description": "“Esta es la mejor plataforma de NFT Marketplace duile pertenece los usuarios obtienen muchos benefios y muchos parecen mercado, pero ninguno bueno.”",
-          "img": "../../../assets/img/man-2.jpg"
+          "img": "../../../assets/img/Avatar Users2_49.svg"
         },
         {
           "name": "Alexander Sarabia",
-          "role": 'Frontend Developer at Axios',
+          "role": 'Frontend Developer',
           "rating": "4.7",
           "description": "“This is the best NFT Marketplace platform which his user get lot of benefits and lots of popping up such a marketplace but none as good as this RAINFTB.”",
-          "img": "../../../assets/img/lady.jpg"
+          "img": "../../../assets/img/Avatar Users2_30.svg"
         }
       ]
 }

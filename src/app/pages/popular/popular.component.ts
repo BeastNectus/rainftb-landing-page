@@ -34,25 +34,25 @@ export class PopularComponent {
         {
           "name": "Rondo Alexander",
           "follower": '9.4m followers',
-          "img": "../../../assets/img/nft.jpg",
+          "img": "../../../assets/img/nft.webp",
           "avatar": "../../../assets/img/Avatar Users2_16.svg"
         },
         {
           "name": "Martias Queenbeer",
           "follower": '10m followers',
-          "img": "../../../assets/img/bitcoin.jpg",
+          "img": "../../../assets/img/bitcoin.webp",
           "avatar": "../../../assets/img/Avatar Users2_17.svg"
         },
         {
           "name": "Tifanny Whites",
           "follower": '7m followers',
-          "img": "../../../assets/img/blockchain.jpg",
+          "img": "../../../assets/img/blockchain.webp",
           "avatar": "../../../assets/img/Avatar Users2_15.svg"
         },
         {
           "name": "Yu Zhong",
           "follower": '20m followers',
-          "img": "../../../assets/img/coin.jpg",
+          "img": "../../../assets/img/coin.webp",
           "avatar": "../../../assets/img/Avatar Users2_18.svg"
         }
       ]

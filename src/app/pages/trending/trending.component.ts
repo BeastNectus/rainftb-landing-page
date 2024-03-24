@@ -34,7 +34,7 @@ export class TrendingComponent {
     products = [
         {
           "price": '2.75 ETH',
-          "img": "../../../assets/img/nft.jpg",
+          "img": "../../../assets/img/nft.webp",
           "avatar": "../../../assets/img/Avatar Users2_10.svg",
           "time": "10 m 20 s left",
           "seller": "Jeep Auctions",
@@ -43,7 +43,7 @@ export class TrendingComponent {
         {
           "name": "Martias Queenbeer",
           "price": '3.75 ETH',
-          "img": "../../../assets/img/bitcoin.jpg",
+          "img": "../../../assets/img/bitcoin.webp",
           "avatar": "../../../assets/img/Avatar Users2_11.svg",
           "time": "20 m 30 s left",
           "seller": "Car Luxy",
@@ -51,7 +51,7 @@ export class TrendingComponent {
         },
         {
           "price": '4.75 ETH',
-          "img": "../../../assets/img/blockchain.jpg",
+          "img": "../../../assets/img/blockchain.webp",
           "avatar": "../../../assets/img/Avatar Users2_12.svg",
           "time": "30 m 40 s left",
           "seller": "Lambo Mind",
@@ -59,7 +59,7 @@ export class TrendingComponent {
         },
         {
           "price": '5.75 ETH',
-          "img": "../../../assets/img/coin.jpg",
+          "img": "../../../assets/img/coin.webp",
           "avatar": "../../../assets/img/Avatar Users2_13.svg",
           "time": "40 m 50 s left",
           "seller": "Axios Legacy",
