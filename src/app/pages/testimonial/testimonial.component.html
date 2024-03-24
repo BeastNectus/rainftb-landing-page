@@ -1,13 +1,13 @@
-<div class="relative isolate overflow-hidden bg-gray-900 py-24 lg:py-20">
+<div class="relative isolate overflow-hidden bg-gray-900 py-12 lg:py-20">
     <div class="mx-auto max-w-7xl px-6 lg:px-2">
-        <div class="container flex w-full flex-col">
-            <div class="flex items-center justify-center md:justify-between lg:justify-between pb-[30px]">
-                <h4 class="text-[32px] font-semibold text-white">Testimonial</h4>
-                <a href="#" class="text-center text-[20px] text-sm font-semibold leading-6 text-white hidden md:inline-block lg:inline-block">
+        <div class="container flex flex-col">
+            <div class="flex items-center justify-center md:justify-between lg:justify-between pb-6 md:pb-12">
+                <h4 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-white">Testimonial</h4>
+                <a href="#" class="text-center text-lg md:text-xl font-semibold leading-6 text-white hidden md:inline-block lg:inline-block">
                     See More <span aria-hidden="true">&rarr;</span>
                 </a>
             </div>
-            <hr class="pb-5 opacity-50" />
+            <hr class="pb-3 md:pb-5 opacity-50" />
             <div class="mt-4 mb-4 pb-5 pt-5">
                 <div class="container">
                     <swiper-container
@@ -18,27 +18,25 @@
                         [spaceBetween]="spaceBetween"
                         free-mode="true">
                         <swiper-slide *ngFor="let info of infos">
-                            <div class="flex h-[192px] w-auto flex-col justify-between bg-[#071736] p-6">
-                                <div class="flex justify-start gap-[5rem]">
-                                    <div class="flex gap-5">
+                            <div class="bg-[#071736] p-4 md:p-6 rounded-lg">
+                                <div class="flex justify-between">
+                                    <div class="flex items-center">
                                         <img
-                                            src="{{info.img}}"
-                                            class="h-[45px] w-[45px] overflow-hidden rounded-full object-cover p-0" />
-                                        <div class="flex flex-col">
-                                            <h2 class="text-md font-semibold text-white text-nowrap">{{info.name}}</h2>
-                                            <p class="text-sm font-normal text-white text-nowrap">{{info.role}}</p>
+                                            [src]="info.img"
+                                            class="h-12 w-12 md:h-16 md:w-16 overflow-hidden rounded-full object-cover p-0" />
+                                        <div class="ml-3">
+                                            <h2 class="text-lg md:text-xl lg:text-2xl font-semibold text-white">{{info.name}}</h2>
+                                            <p class="text-sm md:text-base font-normal text-white">{{info.role}}</p>
                                         </div>
                                     </div>
-                                    <div class="flex items-center justify-between gap-2">
-                                        <img src="../../../assets/img/star.svg" alt="" />
-                                        <p class="text-[16px] font-normal text-white">{{info.rating}}</p>
+                                    <div class="flex items-center gap-2 mt-2 md:mt-0">
+                                        <img src="../../../assets/img/star.svg" alt="" class="h-5 w-5 md:h-6 md:w-6" />
+                                        <p class="text-sm md:text-base font-normal text-white">{{info.rating}}</p>
                                     </div>
                                 </div>
-                                <div>
-                                    <p class="text-justify text-sm font-normal leading-[24px] text-white">
-                                        {{info.description}}
-                                    </p>
-                                </div>
+                                <p class="text-justify mt-4 md:mt-6 text-sm md:text-base font-normal leading-[1.5rem] text-white">
+                                    {{info.description}}
+                                </p>
                             </div>
                         </swiper-slide>
                     </swiper-container>
@@ -46,7 +44,7 @@
             </div>
             <a
                 href="#"
-                class="flex h-[56px] items-center justify-center border-[1.5px] text-center text-[20px] text-sm font-semibold leading-6 text-white hover:bg-white hover:text-black md:hidden lg:hidden">
+                class="flex items-center justify-center h-12 md:h-14 lg:h-16 border-[1.5px] text-center text-lg md:text-xl font-semibold leading-6 text-white hover:bg-white hover:text-black md:hidden lg:hidden">
                 See More
             </a>
         </div>
