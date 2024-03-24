@@ -11,7 +11,7 @@ import { Component, HostListener, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 })
 export class TestimonialComponent {
     slidesPerView:number = 3;
-    spaceBetween:number = 5;
+    spaceBetween:number = 20;
     screenWidth!: number;
 
     @HostListener('window:resize')      
@@ -23,11 +23,11 @@ export class TestimonialComponent {
         }
         else if(this.screenWidth >= 480 && this.screenWidth <= 992){
             this.slidesPerView = 2
-            this.spaceBetween = 5
+            this.spaceBetween = 20
         }
         else if(this.screenWidth >= 992 && this.screenWidth <= 1200){
             this.slidesPerView = 3
-            this.spaceBetween = 5
+            this.spaceBetween = 20
         }
     }
 
