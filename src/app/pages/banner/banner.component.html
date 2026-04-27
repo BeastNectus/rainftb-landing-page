@@ -2,42 +2,42 @@
     <div class="absolute inset-0 -z-10 bg-[linear-gradient(115deg,rgba(8,12,24,1)_0%,rgba(7,8,13,0.94)_42%,rgba(34,18,30,0.92)_100%)]"></div>
     <div class="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-cyan-200/60 to-transparent"></div>
 
-    <div class="section-shell grid min-h-[calc(92vh-76px)] items-center gap-10 py-12 sm:py-16 lg:grid-cols-[1.02fr_0.98fr] lg:py-20">
+    <div class="section-shell grid min-h-[calc(100vh-80px)] items-center gap-8 py-12 sm:py-14 lg:grid-cols-[1.06fr_0.94fr] lg:gap-10 lg:py-10 xl:py-12">
         <div class="min-w-0 max-w-[calc(100vw-2.5rem)] sm:max-w-3xl">
             <p class="eyebrow">Curated NFT marketplace</p>
-            <h1 class="font-display mt-5 max-w-[9.25em] break-words text-4xl font-bold leading-[1.02] tracking-normal text-white sm:max-w-4xl sm:text-6xl lg:text-7xl lg:leading-[0.98]">
+            <h1 class="font-display mt-5 max-w-[9.25em] break-words text-4xl font-bold leading-[1.02] tracking-normal text-white sm:max-w-4xl sm:text-6xl lg:max-w-[10em] lg:text-[4rem] lg:leading-none">
                 Discover, collect, and trade verified digital art.
             </h1>
-            <p class="mt-6 max-w-[19.5rem] text-base leading-8 text-slate-300 sm:max-w-2xl sm:text-lg">
+            <p class="mt-5 max-w-[19.5rem] text-base leading-7 text-slate-300 sm:max-w-2xl sm:text-lg lg:leading-7">
                 RAINFTB brings creators, collectors, and live auction energy into one polished marketplace built for confident bidding and memorable drops.
             </p>
 
-            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div class="mt-6 flex flex-col gap-3 sm:flex-row">
                 <a href="#auctions" class="primary-action w-full sm:w-auto">Explore Auctions</a>
                 <a href="#creators" class="secondary-action w-full sm:w-auto">Start Creating</a>
             </div>
 
-            <dl class="mt-10 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3">
-                <div *ngFor="let stat of stats" class="premium-surface rounded-2xl p-4">
-                    <dt class="font-display text-2xl font-bold text-white sm:text-3xl">{{ stat.value }}</dt>
+            <dl class="mt-8 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3">
+                <div *ngFor="let stat of stats" class="premium-surface rounded-2xl p-3 sm:p-4 lg:p-3">
+                    <dt class="font-display text-2xl font-bold text-white sm:text-3xl lg:text-[1.65rem]">{{ stat.value }}</dt>
                     <dd class="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-slate-400">{{ stat.label }}</dd>
                 </div>
             </dl>
 
-            <div class="mt-6 flex max-w-[19.5rem] flex-wrap gap-2 sm:max-w-none" aria-label="Marketplace safeguards">
+            <div class="mt-5 flex max-w-[19.5rem] flex-wrap gap-2 sm:max-w-none" aria-label="Marketplace safeguards">
                 <span *ngFor="let signal of trustSignals" class="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs font-semibold text-slate-200">
                     {{ signal }}
                 </span>
             </div>
         </div>
 
-        <div class="relative min-w-0 max-w-[calc(100vw-2.5rem)] sm:max-w-none">
+        <div class="relative min-w-0 max-w-[calc(100vw-2.5rem)] sm:max-w-none lg:justify-self-end">
             <div class="premium-surface relative overflow-hidden rounded-2xl p-3">
                 <img
                     [src]="featuredAuction.image"
                     alt="Abstract neon NFT artwork for the featured Prism Genesis auction"
-                    class="aspect-[4/5] w-full rounded-xl object-cover sm:aspect-[5/4] lg:aspect-[4/5]" />
-                <div class="relative mt-3 rounded-xl border border-white/10 bg-black/55 p-4 backdrop-blur-md sm:absolute sm:inset-x-3 sm:bottom-3 sm:mt-0 sm:p-5">
+                    class="aspect-[4/5] w-full rounded-xl object-cover sm:aspect-[5/4] lg:h-[min(58vh,500px)] lg:max-h-[500px] lg:w-auto lg:aspect-auto xl:h-[min(60vh,530px)] xl:max-h-[530px]" />
+                <div class="relative mt-3 rounded-xl border border-white/10 bg-black/55 p-4 backdrop-blur-md sm:absolute sm:inset-x-3 sm:bottom-3 sm:mt-0 sm:p-4 xl:p-5">
                     <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
                         <div>
                             <p class="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200">Featured auction</p>
@@ -48,7 +48,7 @@
                             <p class="font-display text-lg font-bold text-white">{{ featuredAuction.time }}</p>
                         </div>
                     </div>
-                    <div class="mt-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <div class="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                         <div class="flex items-center gap-3">
                             <img [src]="featuredAuction.avatar" alt="Rondo Alexander creator avatar" class="h-11 w-11 rounded-full border border-white/20 bg-white object-cover" />
                             <div>
