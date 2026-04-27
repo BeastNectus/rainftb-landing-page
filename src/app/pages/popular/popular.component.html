@@ -1,51 +1,54 @@
-<div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 h-auto">
-    <div class="mx-auto max-w-7xl px-6 lg:px-2">
-        <div class="container flex w-full flex-col">
-            <div class="flex items-center justify-center md:justify-between lg:justify-between pb-[30px]">
-                <h4 class="text-[32px] font-semibold text-white">Popular Creator</h4>
-                <a href="#" class="text-center text-[20px] text-sm font-semibold leading-6 text-white hidden md:inline-block lg:inline-block">
-                    See More <span aria-hidden="true">&rarr;</span>
-                </a>
+<section id="creators" class="border-b border-white/10 bg-[#0e1017] py-16 sm:py-20 lg:py-24">
+    <div class="section-shell">
+        <div class="grid gap-6 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+            <div>
+                <p class="eyebrow">Creator network</p>
+                <h2 class="section-title mt-3">Popular creators</h2>
             </div>
-            <hr class="pb-5 opacity-50" />
-            <div class="mt-4 mb-4 pb-5 pt-5">
-                <div class="container relative">
-                    <swiper-container
-                        class="mySwiper"
-                        pagination="true"
-                        pagination-clickable="true"
-                        [slidesPerView]="slidesPerView"
-                        space-between="25"
-                        free-mode="true">
-                        <swiper-slide *ngFor="let info of infos">
-                            <div class="flex h-[538px] w-auto flex-col justify-between bg-[#071736]">
-                                <div class="z-10 flex-col">
-                                    <div class="relative m-5 flex h-[336px] w-auto flex-col items-center justify-end bg-gray-500">
-                                        <img src="{{info.img}}" alt="" class="absolute inset-0 h-full w-full object-cover"/>
-                                        <div class="left-50 absolute bottom-[-25px] flex h-[50px] w-[50px] overflow-hidden rounded-full p-0">
-                                            <img src="{{info.avatar}}" class="h-full w-full object-cover"/>
-                                        </div>
-                                    </div>
-                                    <h2 class="pt-8 text-center text-[20px] font-semibold text-white">{{ info.name }}</h2>
-                                    <div class="flex justify-center items-start gap-2">
-                                        <img src="../../../assets/img/Followers.svg">
-                                        <p class="text-center text-[16px] font-normal text-white">{{ info.follower }}</p>
-                                    </div>
-                                </div>
-                                <div
-                                    class="m-4 flex cursor-pointer items-center justify-center bg-gray-500 p-3 text-white hover:bg-white hover:text-black">
-                                    <span class="text-[16px] font-semibold">Follow Now</span>
-                                </div>
-                            </div>
-                        </swiper-slide>
-                    </swiper-container>
+            <p class="muted-copy max-w-2xl lg:justify-self-end">
+                Follow the artists shaping RAINFTB drops, from generative collectors to culture-led studios with strong secondary volume.
+            </p>
+        </div>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <article
+                *ngFor="let info of infos"
+                class="premium-surface group overflow-hidden rounded-2xl bg-[#12141d] backdrop-blur-none transition duration-300 hover:-translate-y-1 hover:border-emerald-200/30">
+                <div class="relative">
+                    <img [src]="info.img" [alt]="info.name + ' collection cover image'" class="aspect-[16/10] w-full object-cover transition duration-300 group-hover:scale-[1.03]" />
+                    <img
+                        [src]="info.avatar"
+                        [alt]="info.name + ' avatar'"
+                        class="absolute -bottom-7 left-5 h-16 w-16 rounded-2xl border-4 border-[#0e1017] bg-white object-cover" />
                 </div>
-            </div>
-            <a
-                href="#"
-                class="flex h-[56px] items-center justify-center border-[1.5px] text-center text-[20px] text-sm font-semibold leading-6 text-white hover:bg-white hover:text-black md:hidden lg:hidden">
-                See More
-            </a>
+
+                <div class="p-5 pt-10">
+                    <div class="flex items-start justify-between gap-3">
+                        <div class="min-w-0">
+                            <h3 class="truncate font-display text-xl font-bold text-white">{{ info.name }}</h3>
+                            <p class="mt-1 text-sm font-medium text-cyan-200">{{ info.handle }}</p>
+                        </div>
+                        <button type="button" class="rounded-xl border border-white/10 px-3 py-2 text-xs font-bold text-white transition hover:border-white/30 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-200">
+                            Follow
+                        </button>
+                    </div>
+
+                    <dl class="mt-6 grid grid-cols-3 gap-2 rounded-xl border border-white/10 bg-black/20 p-3 text-center">
+                        <div>
+                            <dt class="text-[11px] uppercase tracking-[0.12em] text-slate-400">Volume</dt>
+                            <dd class="mt-1 text-sm font-bold text-white">{{ info.volume }}</dd>
+                        </div>
+                        <div>
+                            <dt class="text-[11px] uppercase tracking-[0.12em] text-slate-400">Items</dt>
+                            <dd class="mt-1 text-sm font-bold text-white">{{ info.items }}</dd>
+                        </div>
+                        <div>
+                            <dt class="text-[11px] uppercase tracking-[0.12em] text-slate-400">Fans</dt>
+                            <dd class="mt-1 text-sm font-bold text-white">{{ info.follower }}</dd>
+                        </div>
+                    </dl>
+                </div>
+            </article>
         </div>
     </div>
-</div>
+</section>

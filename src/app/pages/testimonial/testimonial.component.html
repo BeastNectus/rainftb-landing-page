@@ -1,52 +1,28 @@
-<div class="relative isolate overflow-hidden bg-gray-900 py-12 lg:py-20">
-    <div class="mx-auto max-w-7xl px-6 lg:px-2">
-        <div class="container flex flex-col">
-            <div class="flex items-center justify-center md:justify-between lg:justify-between pb-6 md:pb-12">
-                <h4 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-white">Testimonial</h4>
-                <a href="#" class="text-center text-lg md:text-xl font-semibold leading-6 text-white hidden md:inline-block lg:inline-block">
-                    See More <span aria-hidden="true">&rarr;</span>
-                </a>
-            </div>
-            <hr class="pb-3 md:pb-5 opacity-50" />
-            <div class="mt-4 mb-4 pb-5 pt-5">
-                <div class="container">
-                    <swiper-container
-                        class="mySwiper"
-                        pagination="true"
-                        pagination-clickable="true"
-                        [slidesPerView]="slidesPerView"
-                        [spaceBetween]="spaceBetween"
-                        free-mode="true">
-                        <swiper-slide *ngFor="let info of infos">
-                            <div class="bg-[#071736] p-4 md:p-6 rounded-lg">
-                                <div class="flex justify-between">
-                                    <div class="flex items-center">
-                                        <img
-                                            [src]="info.img"
-                                            class="h-12 w-12 md:h-16 md:w-16 overflow-hidden rounded-full object-cover p-0" />
-                                        <div class="ml-3">
-                                            <h2 class="text-lg md:text-xl lg:text-2xl font-semibold text-white">{{info.name}}</h2>
-                                            <p class="text-sm md:text-base font-normal text-white">{{info.role}}</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center gap-2 mt-2 md:mt-0">
-                                        <img src="../../../assets/img/star.svg" alt="" class="h-5 w-5 md:h-6 md:w-6" />
-                                        <p class="text-sm md:text-base font-normal text-white">{{info.rating}}</p>
-                                    </div>
-                                </div>
-                                <p class="text-justify mt-4 md:mt-6 text-sm md:text-base font-normal leading-[1.5rem] text-white">
-                                    {{info.description}}
-                                </p>
-                            </div>
-                        </swiper-slide>
-                    </swiper-container>
+<section id="community" class="border-b border-white/10 bg-[#090d19] py-16 sm:py-20 lg:py-24">
+    <div class="section-shell">
+        <div class="max-w-3xl">
+            <p class="eyebrow">Collector confidence</p>
+            <h2 class="section-title mt-3">Trusted by creators and bidders</h2>
+            <p class="muted-copy mt-3">The marketplace experience is built around clarity, speed, and visible proof points for every drop.</p>
+        </div>
+
+        <div class="mt-10 grid gap-5 lg:grid-cols-3">
+            <article *ngFor="let info of infos" class="premium-surface rounded-2xl bg-[#12141d] p-6 backdrop-blur-none">
+                <div class="flex items-start justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <img [src]="info.img" [alt]="info.name + ' avatar'" class="h-12 w-12 rounded-full border border-white/15 bg-white object-cover" />
+                        <div>
+                            <h3 class="font-display text-lg font-bold text-white">{{ info.name }}</h3>
+                            <p class="text-sm text-slate-400">{{ info.role }}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5">
+                        <img src="assets/img/star.svg" alt="" class="h-4 w-4" aria-hidden="true" />
+                        <span class="text-sm font-bold text-white">{{ info.rating }}</span>
+                    </div>
                 </div>
-            </div>
-            <a
-                href="#"
-                class="flex items-center justify-center h-12 md:h-14 lg:h-16 border-[1.5px] text-center text-lg md:text-xl font-semibold leading-6 text-white hover:bg-white hover:text-black md:hidden lg:hidden">
-                See More
-            </a>
+                <p class="mt-6 text-sm leading-7 text-slate-200">"{{ info.description }}"</p>
+            </article>
         </div>
     </div>
-</div>
+</section>

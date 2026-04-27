@@ -1,0 +1,9 @@
+:host {
+    display: block;
+}
+
+.mobile-menu-button {
+    position: fixed;
+    left: min(calc(100vw - 4rem), 326px);
+    top: 1rem;
+}

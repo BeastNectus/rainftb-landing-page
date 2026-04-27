@@ -1,69 +1,45 @@
-<div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-2">
-        <div class="container flex w-full flex-col">
-            <div class="flex items-center justify-center pb-[30px] md:justify-between lg:justify-between">
-                <h4 class="text-[32px] font-semibold text-white">Trending Auctions</h4>
-                <a href="#" class="hidden text-center text-[20px] text-sm font-semibold leading-6 text-white md:inline-block lg:inline-block">
-                    See More <span aria-hidden="true">&rarr;</span>
-                </a>
+<section id="auctions" class="relative border-b border-white/10 bg-[#0a0b12] py-16 sm:py-20 lg:py-24">
+    <div class="section-shell">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+                <p class="eyebrow">Live bidding</p>
+                <h2 class="section-title mt-3">Trending auctions</h2>
+                <p class="muted-copy mt-3 max-w-2xl">Track active drops with transparent pricing, verified creators, and clear countdowns for every bid window.</p>
             </div>
-            <hr class="pb-5 opacity-50" />
-            <div class="mb-4 mt-4 pb-5 pt-5">
-                <div class="container">
-                    <swiper-container
-                        class="mySwiper"
-                        pagination="true"
-                        pagination-clickable="true"
-                        [slidesPerView]="slidesPerView"
-                        space-between="25"
-                        free-mode="true">
-                        <swiper-slide *ngFor="let product of products">
-                            <div class="flex h-[538px] w-auto flex-col justify-between bg-[#071736]">
-                                <div class="flex-col">
-                                    <div class="relative m-5 flex h-[336px] w-auto flex-col justify-end bg-gray-500">
-                                        <img src="{{ product.img }}" alt="" class="absolute inset-0 h-full w-full object-cover"/>
-                                        <div class="z-10 m-4 flex bg-black bg-opacity-50 p-5">
-                                            <div class="container flex flex-col">
-                                                <p class="text-[14px] font-normal text-white">Current Bid</p>
-                                                <span class="text-[20px] font-semibold text-white">{{ product.price }}</span>
-                                            </div>
-                                            <div class="container flex flex-col justify-center">
-                                                <span class="text-[16px] font-semibold text-white">{{ product.time }}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="container flex justify-around">
-                                        <div class="flex gap-4">
-                                            <img
-                                                src="{{ product.avatar }}"
-                                                alt=""
-                                                class="flex h-[48px] w-[48px] items-center rounded-full object-cover"/>
-                                            <div class="flex flex-col">
-                                                <h3 class="text-[20px] font-semibold text-white">{{ product.seller }}</h3>
-                                                <p class="text-[14px] font-normal text-gray-400">
-                                                    {{ product.social }}
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center">
-                                            <p class="text-[16px] font-semibold text-[#C4C4C4]">◄ 0.8%</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="flex h-[56px] w-full cursor-pointer items-center justify-center bg-gray-500 text-white hover:bg-white hover:text-black">
-                                    <span class="text-[16px] font-semibold">Place a Bid</span>
-                                </div>
-                            </div>
-                        </swiper-slide>
-                    </swiper-container>
+            <a href="#marketplace" class="secondary-action w-full sm:w-auto">View Marketplace</a>
+        </div>
+
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <article
+                *ngFor="let product of products"
+                class="premium-surface group flex min-h-[455px] flex-col overflow-hidden rounded-2xl bg-[#12141d] backdrop-blur-none transition duration-300 hover:-translate-y-1 hover:border-cyan-200/30">
+                <div class="relative p-3">
+                    <img [src]="product.img" [alt]="product.title + ' NFT artwork'" class="aspect-[4/3] w-full rounded-xl object-cover" />
+                    <div class="absolute left-5 top-5 rounded-full border border-white/10 bg-black/55 px-3 py-1.5 text-xs font-bold text-white backdrop-blur-md">
+                        {{ product.time }} left
+                    </div>
                 </div>
-            </div>
-            <a
-                href="#"
-                class="flex h-[56px] items-center justify-center border-[1.5px] text-center text-[20px] text-sm font-semibold leading-6 text-white hover:bg-white hover:text-black md:hidden lg:hidden">
-                See More
-            </a>
+                <div class="flex flex-1 flex-col p-5 pt-2">
+                    <p class="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">{{ product.collection }}</p>
+                    <h3 class="mt-2 font-display text-xl font-bold text-white">{{ product.title }}</h3>
+
+                    <div class="mt-5 flex items-center gap-3">
+                        <img [src]="product.avatar" [alt]="product.seller + ' avatar'" class="h-10 w-10 rounded-full border border-white/15 bg-white object-cover" />
+                        <div class="min-w-0">
+                            <p class="truncate text-sm font-semibold text-white">{{ product.seller }}</p>
+                            <p class="text-xs text-slate-400">Verified creator</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-auto flex items-end justify-between gap-3 pt-6">
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.16em] text-slate-400">Current bid</p>
+                            <p class="mt-1 font-display text-2xl font-bold text-white">{{ product.price }}</p>
+                        </div>
+                        <button type="button" class="primary-action min-h-11 px-4">Bid</button>
+                    </div>
+                </div>
+            </article>
         </div>
     </div>
-</div>
+</section>
